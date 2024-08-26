@@ -1,15 +1,14 @@
 const removeFromArray = function(array,...removeThese) {
     
-    function getRidOf(arr,thingToRemove){
-        return arr.filter((element) => (element !== thingToRemove));
-    }
+    const newArray = [];
 
-    for (removeElement of removeThese){
-        array = getRidOf(array,removeElement);
-    }
+    array.forEach(element => {
+        if(!removeThese.includes(element)){
+            newArray.push(element);
+        }
+    });
 
-    return array;
-
+    return newArray;
 };
 
 // Do not edit below this line
